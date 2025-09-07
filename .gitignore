@@ -1,8 +1,14 @@
-# Python cache & virtual environments
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# Virtual environment
+env/
+venv/
+.tfenv/
+
+# NLTK data (optional, can be downloaded on first run)
 *.pkl
 *.db
 .venv/
@@ -20,8 +26,35 @@ nltk_data/
 .DS_Store
 Thumbs.db
 
-# Environment files
-.env
+# Logs
+*.log
+
+# Hugging Face cache
+~/.cache/huggingface/
+
+# PyTorch / TensorFlow / Keras model files
+*.pt
+*.pth
+*.ckpt
+*.h5
+
+# Large data / output folders
+data/
+output/
+models/
+
+# Jupyter / notebook checkpoints
+.ipynb_checkpoints/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Environment / config files (optional)
+*.env
+
 
 # Hugging Face Spaces cache
 .gradio/
@@ -29,3 +62,4 @@ Thumbs.db
 
 # Logs
 *.log
+
