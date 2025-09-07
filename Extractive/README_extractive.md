@@ -1,122 +1,113 @@
+# **Long Article Summarizer (Extractive)**
 
-# 💬 Harini Portfolio Chatbot
+[![Open in Hugging Face](https://img.shields.io/badge/Hugging%20Face-Try%20Demo-blue)](https://huggingface.co/spaces/CodeByHarini/long-article-summarizer-extractive)
 
-An **interactive AI assistant** built with **Gradio** and **Hugging Face Transformers** that answers questions about Harini’s skills, projects, and contact info.  
-Features a modern **Instagram-DM-inspired UI** with animated gradient blobs.
+## **Project Overview**
 
----
+Digesting long articles like news, blogs, or research papers can be time-consuming.
+This project demonstrates an **extractive summarization approach**, which quickly identifies the most important sentences from the text to provide a concise summary.
 
-## 🚀 Live Demo
+> **Note:** This is the **extractive stage**. The abstractive transformer-based version is available separately in the Abstractive module.
 
-Try the chatbot live here:  
-👉 [Harini AI Portfolio Chatbot](https://huggingface.co/spaces/CodeByHarini/harini-portfolio-chatbot)
 
----
+## **Extractive Summarization**
 
-## ⚡ Quick Setup (One-Click for Recruiters)
+**Method:** TextRank (graph-based ranking of sentences)
 
-### **Option 1: Using pip**
+* Selects the most important sentences from the input text.
+* Provides a quick, accurate baseline summary.
+* Implemented in Python using **BeautifulSoup**, **requests**, and **sumy**.
+
+
+## **Live Demo**
+
+Try the live demo on Hugging Face Spaces:  
+[**Click here to try it now**](https://huggingface.co/spaces/CodeByHarini/long-article-summarizer-extractive)
+
+
+### **Screenshots**
+
+**Input Text Example:**
+
+![Input Screenshot](https://github.com/CodeByHarini/long-article-summarizer/blob/main/Extractive/Input%20Extractive.jpg)
+
+**Extractive Summary Output:**
+
+![Output Screenshot](https://github.com/CodeByHarini/long-article-summarizer/blob/main/Extractive/Output%20Extractive.jpg)
+
+### **Demo Video**
+
+Watch the extractive summarizer in action:
+
+![Demo Video](https://github.com/CodeByHarini/long-article-summarizer/blob/main/Extractive/Demo%20Video%20Extractive.mp4)
+
+
+## **Installation (Local Testing)**
+
 ```bash
-# Clone the repository
-git clone https://github.com/CodeByHarini/Harini_Portfolio_Chatbot.git
-cd Harini_Portfolio_Chatbot
+# Clone the repo
+git clone https://github.com/CodeByHarini/long-article-summarizer.git
+cd long-article-summarizer/Extractive
 
-# Create & activate virtual environment
+# Create virtual environment
 python -m venv venv
-# Windows
-.\venv\Scripts\activate
-# macOS/Linux
-source venv/bin/activate
+venv\Scripts\activate    # Windows
+# source venv/bin/activate  # Mac/Linux
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r requirements_extractive.txt
 
-# Run the chatbot
-python app.py
-````
-
-### **Option 2: Using Conda**
-
-```bash
-# Clone the repository
-git clone https://github.com/CodeByHarini/Harini_Portfolio_Chatbot.git
-cd Harini_Portfolio_Chatbot
-
-# Create Conda environment
-conda env create -f environment.yml
-conda activate harini_chatbot_env
-
-# Run the chatbot
-python app.py
-```
-
-> The chatbot will open at `http://127.0.0.1:7860` locally.
-> Optional: Use `python app.py --share` to get a public Hugging Face link.
-
----
-
-## 📸 Demo Screenshot / Video
-
-### Screenshot
-
-![Chatbot Screenshot](assets/chatbot_screenshot.png)
-
-### Video
-
-[![Watch Video](assets/chatbot_demo_thumbnail.png)](assets/chatbot_demo.mp4)
-
----
-
-## 🖥 Features
-
-* AI-powered Q\&A using **DistilBERT (SQuAD)**
-* Instagram-DM-inspired **animated UI**
-* Recognizes portfolio-related queries: Bio, Skills, Projects, Contact
-* Typing simulation & clear chat button
-* Exit command support (`exit`, `quit`, `bye`)
-
----
-
-## 🛠 Tech Stack
-
-* Python 3.10+
-* Gradio – Web interface
-* Hugging Face Transformers – DistilBERT (SQuAD)
-* PyTorch – Backend for Transformers
-* HTML & CSS – Custom UI & animations
-
----
-
-## 📂 Folder Structure
-
-```
-Harini_Portfolio_Chatbot/
-│
-├─ app.py
-├─ context_builder.py
-├─ faq_data.py
-├─ LICENSE
-├─ README.md
-├─ requirements.txt
-├─ environment.yml
-└─ assets/  # Screenshots, video, icons
-```
-
----
-
-## 📜 License
-
-MIT License. See [LICENSE](LICENSE) for details.
-
----
-🙏 Acknowledgements
-
-Hugging Face Transformers for NLP models.
-
-Gradio documentation for interactive web UI.
-
-Inspiration from Instagram DM UI for modern chatbot design.
+# Run the app
+python app_extractive.py
 ```
 
 
+## **Folder Structure (Extractive)**
+
+```
+Extractive/
+├── app_extractive.py                  # Main extractive summarizer app
+├── summarizer_extractive.py           # TextRank / extractive logic
+├── sample_articles_extractive.json    # Sample articles for testing
+├── Demo Video Extractive.mp4          # Demo video
+├── Input Extractive.jpg               # Input example screenshot
+├── Output Extractive.jpg              # Output example screenshot
+├── requirements_extractive.txt        # Required Python packages
+├── runtime_extractive.txt             # Runtime configuration
+├── README_extractive.md               # Documentation
+```
+
+
+## **Technologies & Libraries**
+
+* Python 3.12
+* BeautifulSoup4 — HTML parsing
+* Requests — HTTP requests
+* Sumy (TextRank) — Extractive summarization
+* Gradio — Local web interface
+
+
+## **Next Steps / Abstractive Version**
+
+* Replace TextRank with **transformer-based models** like BART, T5, or LED.
+* Handle long documents using **chunking** or **long-context models**.
+* Compare extractive vs. abstractive outputs using **ROUGE** or **BERTScore**.
+
+
+## **Portfolio Soundbite**
+
+> “Built a two-stage summarization system: starting with a fast extractive baseline using TextRank, then extending to transformer-based abstractive summaries. This demonstrates both engineering discipline and hands-on experience with modern NLP models.”
+
+
+## **Acknowledgements**
+
+* Sumy — for TextRank implementation
+* BeautifulSoup4 — for HTML parsing
+* Hugging Face Spaces — for hosting the live demo
+* OpenAI & ChatGPT — guidance on portfolio structuring
+
+
+## **License**
+
+This project is licensed under the [MIT License](https://github.com/CodeByHarini/long-article-summarizer/blob/main/LICENSE) — see the LICENSE file for details.
 
