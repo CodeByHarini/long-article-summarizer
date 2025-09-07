@@ -111,5 +111,6 @@ python app_abstractive.py
 
 ## License
 
-This project is licensed under the MIT License — see LICENSE for details.
+This project is licensed under the MIT License — see [LICENSE](https://github.com/CodeByHarini/long-article-summarizer/blob/main/LICENSE) for details.
+
 
