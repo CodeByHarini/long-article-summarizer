@@ -97,8 +97,3 @@ long-article-summarizer/
 
 This project is licensed under the MIT License — see LICENSE for details.
 
----
-
-If you want, I can **also combine both extractive and abstractive READMEs** into **one master README** that clearly shows the two-stage pipeline, so your GitHub repo looks clean and professional.
-
-Do you want me to do that?
