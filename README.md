@@ -32,7 +32,7 @@ Try the live demo on Hugging Face Spaces:
 
 **Extractive Summary Output:**
 
-![Output Screenshot](Output Extractive.jpg)
+![Output Screenshot](https://github.com/CodeByHarini/long-article-summarizer/blob/af6e5925821f241b601bcf92647c53e851339b70/Output%20Extractive.jpg)
 
 ### **Demo Video**
 
