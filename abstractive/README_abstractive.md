@@ -1,10 +1,96 @@
+# Long Article Summarizer (Abstractive)
+
+## Project Overview
+
+The abstractive summarizer generates **human-like summaries** of long articles, blogs, and research papers using **transformer-based models**. Unlike extractive summarization, it can **rephrase and condense content**, producing fluent, coherent summaries.
+
+This project builds on the extractive baseline and demonstrates a **two-stage summarization pipeline**.
+
+## Abstractive Summarization
+
+**Method:** Transformer-based sequence-to-sequence models (BART / T5 / LED)
+
+* Handles long documents with **chunking** and **context-aware summarization**.
+* Produces concise, natural-sounding summaries, not just extracted sentences.
+* Implemented in Python using Hugging Face Transformers and Gradio for the web interface.
+
+## Live Demo
+
+Try the abstractive summarizer live on Hugging Face Spaces:
+[Click here to try it now](https://huggingface.co/spaces/CodeByHarini/long-article-summarizer-abstractive)
+
+## Screenshots
+
+**Input Text Example:**
+*Input Screenshot*
+
+**Abstractive Summary Output:**
+*Output Screenshot*
+
+**Demo Video:**
+*Demo Video*
+
+
+## Installation (Local Testing)
+
+```bash
+# Clone the repo
+git clone https://github.com/CodeByHarini/long-article-summarizer.git
+cd long-article-summarizer/abstractive
+
+# Create virtual environment
+python -m venv venv
+venv\Scripts\activate      # Windows
+# source venv/bin/activate  # Mac/Linux
+
+# Install dependencies
+pip install -r requirements_abstractive.txt
+
+# Run the app
+python app_abstractive.py
+```
+
+## Folder Structure
+
+```
+long-article-summarizer/
+│
+├─ abstractive/
+│   ├─ app_abstractive.py             # Main abstractive summarizer app
+│   ├─ summarizer_abstractive.py      # Transformer-based summarization logic
+│   ├─ screenshots/
+│   │   ├─ input_example.png
+│   │   └─ output_example.png
+│   ├─ demo/
+│   │   └─ demo_video.mp4
+│   ├─ requirements_abstractive.txt
+│   └─ README.md
+```
+
+## Technologies & Libraries
+
+* Python 3.12
+* Hugging Face Transformers (BART / T5 / LED)
+* Gradio (for web interface)
+* PyTorch or TensorFlow backend
+* Optional: `nltk` / `spacy` for text preprocessing
+
+## Portfolio Soundbite
+
+> “Extended a two-stage summarization system by adding an abstractive pipeline using modern transformer-based models, demonstrating both NLP expertise and practical deployment skills.”
+
+## Acknowledgements
+
+* Hugging Face Transformers — for pretrained models and pipelines
+* Gradio — for web interface
+* OpenAI & ChatGPT — for guidance and code design insights
+
+## License
+
+This project is licensed under the MIT License — see LICENSE for details.
+
 ---
-title: Long Article Summarizer (Abstractive)
-emoji: 📝
-colorFrom: purple
-colorTo: indigo
-sdk: gradio
-sdk_version: "5.44.1"
-app_file: app.py
-pinned: false
----
+
+If you want, I can **also combine both extractive and abstractive READMEs** into **one master README** that clearly shows the two-stage pipeline, so your GitHub repo looks clean and professional.
+
+Do you want me to do that?
