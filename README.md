@@ -28,17 +28,17 @@ Try the live demo on Hugging Face Spaces:
 
 **Input Text Example:**
 
-![Input Screenshot](screenshots/input_example.png)
+![Input Screenshot](Input_Extractive.jpg)
 
 **Extractive Summary Output:**
 
-![Output Screenshot](screenshots/output_example.png)
+![Output Screenshot](OutputExtractive.jpg)
 
 ### **Demo Video**
 
 Watch the extractive summarizer in action:
 
-[![Demo Video](demo/demo_video_thumbnail.png)](demo/demo_video.mp4)
+[![Demo Video](demo/demo_video_thumbnail.png)](demo/Demo_Video.mp4)
 
 
 ## **Installation (Local Testing)**
