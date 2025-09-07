@@ -1,0 +1,31 @@
+# Python cache & virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.db
+.venv/
+venv/
+env/
+
+# Jupyter & VSCode
+.ipynb_checkpoints
+.vscode/
+
+# NLTK data cache
+nltk_data/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# Hugging Face Spaces cache
+.gradio/
+.idea/
+
+# Logs
+*.log
