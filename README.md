@@ -1,5 +1,5 @@
 ---
-title: Harini's Abstractive Summarizer
+title: Long Article Summarizer (Abstractive)
 emoji: 📝
 colorFrom: purple
 colorTo: indigo
