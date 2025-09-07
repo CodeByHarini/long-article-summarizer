@@ -64,3 +64,9 @@ models/
 *.log
 
 Abstractive OLD/
+
+# Ignore media files
+*.mp4
+*.jpg
+*.jpeg
+*.png
