@@ -1,122 +1,116 @@
+# Long Article Summarizer (Extractive)
 
-# 💬 Harini Portfolio Chatbot
+[![Open in Hugging Face](https://img.shields.io/badge/Hugging%20Face-Try%20Demo-blue)](https://huggingface.co/spaces/CodeByHarini/long-article-summarizer-extractive)
 
-An **interactive AI assistant** built with **Gradio** and **Hugging Face Transformers** that answers questions about Harini’s skills, projects, and contact info.  
-Features a modern **Instagram-DM-inspired UI** with animated gradient blobs.
+## **Project Overview**
 
----
+Digesting long articles like news, blogs, and research papers can be time-consuming.  
+This project demonstrates a **two-step summarization approach**, starting with **extractive summarization** as a fast baseline.
 
-## 🚀 Live Demo
+> **Note:** This README focuses on the extractive stage. The abstractive (transformer-based) version will be added later.
 
-Try the chatbot live here:  
-👉 [Harini AI Portfolio Chatbot](https://huggingface.co/spaces/CodeByHarini/harini-portfolio-chatbot)
 
----
+## **Extractive Summarization**
 
-## ⚡ Quick Setup (One-Click for Recruiters)
+**Method:** TextRank (graph-based ranking of sentences)
 
-### **Option 1: Using pip**
+- Selects the most important sentences from the input text.
+- Provides a **quick, accurate baseline summary**.
+- Implemented in Python using `BeautifulSoup`, `requests`, and `sumy`.
+
+### **Live Demo**
+
+Try the live demo on Hugging Face Spaces:  
+[**Click here to try it now**](https://huggingface.co/spaces/CodeByHarini/long-article-summarizer-extractive)
+
+
+### **Screenshots**
+
+**Input Text Example:**
+
+![Input Screenshot](screenshots/input_example.png)
+
+**Extractive Summary Output:**
+
+![Output Screenshot](screenshots/output_example.png)
+
+### **Demo Video**
+
+Watch the extractive summarizer in action:
+
+[![Demo Video](demo/demo_video_thumbnail.png)](demo/demo_video.mp4)
+
+
+## **Installation (Local Testing)**
+
 ```bash
-# Clone the repository
-git clone https://github.com/CodeByHarini/Harini_Portfolio_Chatbot.git
-cd Harini_Portfolio_Chatbot
+# Clone the repo
+git clone https://github.com/CodeByHarini/long-article-summarizer.git
+cd long-article-summarizer
 
-# Create & activate virtual environment
+# Create virtual environment
 python -m venv venv
-# Windows
-.\venv\Scripts\activate
-# macOS/Linux
-source venv/bin/activate
+venv\Scripts\activate    # Windows
+# source venv/bin/activate  # Mac/Linux
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Run the chatbot
+# Run the app
 python app.py
 ````
 
-### **Option 2: Using Conda**
-
-```bash
-# Clone the repository
-git clone https://github.com/CodeByHarini/Harini_Portfolio_Chatbot.git
-cd Harini_Portfolio_Chatbot
-
-# Create Conda environment
-conda env create -f environment.yml
-conda activate harini_chatbot_env
-
-# Run the chatbot
-python app.py
-```
-
-> The chatbot will open at `http://127.0.0.1:7860` locally.
-> Optional: Use `python app.py --share` to get a public Hugging Face link.
-
 ---
 
-## 📸 Demo Screenshot / Video
-
-### Screenshot
-
-![Chatbot Screenshot](assets/chatbot_screenshot.png)
-
-### Video
-
-[![Watch Video](assets/chatbot_demo_thumbnail.png)](assets/chatbot_demo.mp4)
-
----
-
-## 🖥 Features
-
-* AI-powered Q\&A using **DistilBERT (SQuAD)**
-* Instagram-DM-inspired **animated UI**
-* Recognizes portfolio-related queries: Bio, Skills, Projects, Contact
-* Typing simulation & clear chat button
-* Exit command support (`exit`, `quit`, `bye`)
-
----
-
-## 🛠 Tech Stack
-
-* Python 3.10+
-* Gradio – Web interface
-* Hugging Face Transformers – DistilBERT (SQuAD)
-* PyTorch – Backend for Transformers
-* HTML & CSS – Custom UI & animations
-
----
-
-## 📂 Folder Structure
+## **Folder Structure**
 
 ```
-Harini_Portfolio_Chatbot/
+long-article-summarizer/
 │
-├─ app.py
-├─ context_builder.py
-├─ faq_data.py
-├─ LICENSE
-├─ README.md
+├─ app.py                     # Main extractive summarizer app
+├─ summarizer.py              # TextRank / extractive logic
+├─ datasets/
+│   └─ sample_articles.json
+├─ screenshots/
+│   ├─ input_example.png
+│   └─ output_example.png
+├─ demo/
+│   └─ demo_video.mp4
 ├─ requirements.txt
-├─ environment.yml
-└─ assets/  # Screenshots, video, icons
+├─ README.md
+├─ LICENSE
+└─ .gitignore
 ```
 
----
+## **Technologies & Libraries**
 
-## 📜 License
+* Python 3.12
+* BeautifulSoup4
+* Requests
+* Sumy (TextRank)
+* Gradio (for local web interface)
 
-MIT License. See [LICENSE](LICENSE) for details.
+## **Next Steps / Abstractive Version**
 
----
-🙏 Acknowledgements
-
-Hugging Face Transformers for NLP models.
-
-Gradio documentation for interactive web UI.
-
-Inspiration from Instagram DM UI for modern chatbot design.
-```
+* Replace TextRank with transformer-based models like **BART / T5 / LED**.
+* Handle long documents using **chunking or long-context models**.
+* Compare extractive vs. abstractive outputs using **ROUGE / BERTScore**.
 
 
+## **Portfolio Soundbite**
+
+> “Built a two-stage summarization system: starting with a fast extractive baseline using TextRank, then extending to transformer-based abstractive summaries. This demonstrates both **engineering discipline** and hands-on experience with **modern NLP models**.”
+
+
+## **Acknowledgements**
+
+* [Sumy](https://github.com/miso-belica/sumy) — for TextRank implementation
+* [BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/) — for HTML parsing
+* [Hugging Face Spaces](https://huggingface.co/spaces) — for hosting the live demo
+* [OpenAI & ChatGPT](https://openai.com) — guidance on portfolio structuring
+
+
+## **License**
+
+This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
 
