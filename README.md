@@ -3,10 +3,10 @@
 This repository demonstrates a **two-stage summarization system** for long articles, blogs, and research papers:
 
 1. **Extractive Summarizer** – Quickly identifies and extracts the most important sentences using **TextRank**.
-   [Learn more →]()
+   [Learn more →](https://github.com/CodeByHarini/long-article-summarizer/blob/main/Abstractive/README_abstractive.md)
 
 2. **Abstractive Summarizer** – Generates **human-like summaries** using transformer-based models (BART, T5, LED).
-   [Learn more →]()
+   [Learn more →](https://github.com/CodeByHarini/long-article-summarizer/blob/main/Abstractive/README_abstractive.md)
 
 
 ## Project Overview
