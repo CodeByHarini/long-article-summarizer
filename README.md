@@ -38,7 +38,7 @@ Try the live demo on Hugging Face Spaces:
 
 Watch the extractive summarizer in action:
 
-[![Demo Video](demo/demo_video_thumbnail.png)](demo/Demo Video.mp4)
+![Demo Video](https://github.com/CodeByHarini/long-article-summarizer/blob/e826f1628f71fc79eb98ba1acbe3f83e64dd8c13/Demo%20Video.mp4)
 
 
 ## **Installation (Local Testing)**
