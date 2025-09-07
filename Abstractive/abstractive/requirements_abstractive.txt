@@ -1,6 +1,0 @@
-gradio>=4.37.2
-transformers>=4.30.0
-torch>=2.0.0
-requests
-beautifulsoup4
-nltk
