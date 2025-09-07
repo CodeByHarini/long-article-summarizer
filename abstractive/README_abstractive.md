@@ -1,4 +1,5 @@
 # Long Article Summarizer (Abstractive)
+[![Open in Hugging Face](https://img.shields.io/badge/Hugging%20Face-Try%20Demo-blue)](https://huggingface.co/spaces/CodeByHarini/long-article-summarizer-abstractive)
 
 ## Project Overview
 
@@ -14,21 +15,28 @@ This project builds on the extractive baseline and demonstrates a **two-stage su
 * Produces concise, natural-sounding summaries, not just extracted sentences.
 * Implemented in Python using Hugging Face Transformers and Gradio for the web interface.
 
-## Live Demo
+### **Live Demo**
 
-Try the abstractive summarizer live on Hugging Face Spaces:
-[Click here to try it now](https://huggingface.co/spaces/CodeByHarini/long-article-summarizer-abstractive)
+Try the live demo on Hugging Face Spaces:  
+[**Click here to try it now**](https://huggingface.co/spaces/CodeByHarini/long-article-summarizer-abstractive)
 
-## Screenshots
+
+### **Screenshots**
 
 **Input Text Example:**
-*Input Screenshot*
 
-**Abstractive Summary Output:**
-*Output Screenshot*
+![Input Screenshot](https://github.com/CodeByHarini/long-article-summarizer/blob/3baf91faddcb9dfca242870d835b64cb2df51641/Input%20Extractive.jpg)
 
-**Demo Video:**
-*Demo Video*
+**Extractive Summary Output:**
+
+![Output Screenshot](https://github.com/CodeByHarini/long-article-summarizer/blob/af6e5925821f241b601bcf92647c53e851339b70/Output%20Extractive.jpg)
+
+### **Demo Video**
+
+Watch the extractive summarizer in action:
+
+![Demo Video](https://github.com/CodeByHarini/long-article-summarizer/blob/e826f1628f71fc79eb98ba1acbe3f83e64dd8c13/Demo%20Video.mp4)
+
 
 
 ## Installation (Local Testing)
