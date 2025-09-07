@@ -5,6 +5,6 @@ colorFrom: purple
 colorTo: indigo
 sdk: gradio
 sdk_version: "5.44.1"
-app_file: app_abstractive.py
+app_file: app.py
 pinned: false
 ---
