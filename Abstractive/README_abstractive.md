@@ -25,17 +25,17 @@ Try the live demo on Hugging Face Spaces:
 
 **Input Text Example:**
 
-![Input Screenshot](https://github.com/CodeByHarini/long-article-summarizer/blob/main/abstractive/Input%20Abstractive.jpg)
-**Extractive Summary Output:**
+![Input Screenshot](https://github.com/CodeByHarini/long-article-summarizer/blob/main/Abstractive/Input%20Abstractive.jpg)
 
-![Output Screenshot](https://github.com/CodeByHarini/long-article-summarizer/blob/main/abstractive/Output%20Abstractive.jpg)
+**Abstractive Summary Output:**
+
+![Output Screenshot](https://github.com/CodeByHarini/long-article-summarizer/blob/main/Abstractive/Output%20Abstractive.jpg)
 
 ### **Demo Video**
 
 Watch the extractive summarizer in action:
 
-![Demo Video](https://github.com/CodeByHarini/long-article-summarizer/blob/main/abstractive/Demo%20Video%20Abstractive.mp4)
-
+![Demo Video](https://github.com/CodeByHarini/long-article-summarizer/blob/main/Abstractive/Demo%20Video%20Abstractive.mp4)
 
 
 ## Installation (Local Testing)
