@@ -1,47 +1,61 @@
-# Long Article Summarizer (Extractive)
+# Long Article Summarizer
 
-[![Open in Hugging Face](https://img.shields.io/badge/Hugging%20Face-Try%20Demo-blue)](https://huggingface.co/spaces/CodeByHarini/long-article-summarizer-extractive)
+This repository demonstrates a **two-stage summarization system** for long articles, blogs, and research papers:
 
-## **Project Overview**
+1. **Extractive Summarizer** – Quickly identifies and extracts the most important sentences using **TextRank**.
+   [Learn more →](extractive/README.md)
 
-Digesting long articles like news, blogs, and research papers can be time-consuming.  
-This project demonstrates a **two-step summarization approach**, starting with **extractive summarization** as a fast baseline.
-
-> **Note:** This README focuses on the extractive stage. The abstractive (transformer-based) version will be added later.
-
-
-## **Extractive Summarization**
-
-**Method:** TextRank (graph-based ranking of sentences)
-
-- Selects the most important sentences from the input text.
-- Provides a **quick, accurate baseline summary**.
-- Implemented in Python using `BeautifulSoup`, `requests`, and `sumy`.
-
-### **Live Demo**
-
-Try the live demo on Hugging Face Spaces:  
-[**Click here to try it now**](https://huggingface.co/spaces/CodeByHarini/long-article-summarizer-extractive)
+2. **Abstractive Summarizer** – Generates **human-like summaries** using transformer-based models (BART, T5, LED).
+   [Learn more →](abstractive/README.md)
 
 
-### **Screenshots**
+## Project Overview
 
-**Input Text Example:**
+Digesting long documents can be time-consuming. This system provides:
 
-![Input Screenshot](https://github.com/CodeByHarini/long-article-summarizer/blob/3baf91faddcb9dfca242870d835b64cb2df51641/Input%20Extractive.jpg)
-
-**Extractive Summary Output:**
-
-![Output Screenshot](https://github.com/CodeByHarini/long-article-summarizer/blob/af6e5925821f241b601bcf92647c53e851339b70/Output%20Extractive.jpg)
-
-### **Demo Video**
-
-Watch the extractive summarizer in action:
-
-![Demo Video](https://github.com/CodeByHarini/long-article-summarizer/blob/e826f1628f71fc79eb98ba1acbe3f83e64dd8c13/Demo%20Video.mp4)
+* **Fast extractive summaries** for immediate insights.
+* **Abstractive summaries** for fluent, condensed, and coherent summaries.
+* A modular structure for experimentation with different NLP models.
 
 
-## **Installation (Local Testing)**
+
+## Folder Structure
+
+```
+long-article-summarizer/
+│
+├─ README.md                     # Master README (overview of the repo)
+├─ extractive/
+│   ├─ README.md                 # Extractive-specific README
+│   ├─ app.py
+│   ├─ summarizer.py
+│   ├─ datasets/
+│   │   └─ sample_articles.json
+│   ├─ screenshots/
+│   ├─ demo/
+│   └─ requirements.txt
+│
+├─ abstractive/
+│   ├─ README.md                 # Abstractive-specific README
+│   ├─ app_abstractive.py
+│   ├─ summarizer_abstractive.py
+│   ├─ datasets/
+│   │   └─ sample_articles.json
+│   ├─ screenshots/
+│   ├─ demo/
+│   └─ requirements_abstractive.txt
+│
+├─ LICENSE
+└─ .gitignore
+```
+
+## Live Demo
+
+* **Extractive Summarizer:** [Try it on Hugging Face Spaces](#)
+* **Abstractive Summarizer:** [Try it on Hugging Face Spaces](#)
+
+
+## Installation (Local Testing)
 
 ```bash
 # Clone the repo
@@ -50,67 +64,51 @@ cd long-article-summarizer
 
 # Create virtual environment
 python -m venv venv
-venv\Scripts\activate    # Windows
+venv\Scripts\activate      # Windows
 # source venv/bin/activate  # Mac/Linux
 
-# Install dependencies
+# Install dependencies for extractive
+cd extractive
 pip install -r requirements.txt
-
-# Run the app
 python app.py
-````
 
----
-
-## **Folder Structure**
-
-```
-long-article-summarizer/
-│
-├─ app.py                     # Main extractive summarizer app
-├─ summarizer.py              # TextRank / extractive logic
-├─ datasets/
-│   └─ sample_articles.json
-├─ screenshots/
-│   ├─ input_example.png
-│   └─ output_example.png
-├─ demo/
-│   └─ demo_video.mp4
-├─ requirements.txt
-├─ README.md
-├─ LICENSE
-└─ .gitignore
+# Or install dependencies for abstractive
+cd ../abstractive
+pip install -r requirements_abstractive.txt
+python app_abstractive.py
 ```
 
-## **Technologies & Libraries**
+## Technologies & Libraries
 
 * Python 3.12
-* BeautifulSoup4
-* Requests
-* Sumy (TextRank)
-* Gradio (for local web interface)
-
-## **Next Steps / Abstractive Version**
-
-* Replace TextRank with transformer-based models like **BART / T5 / LED**.
-* Handle long documents using **chunking or long-context models**.
-* Compare extractive vs. abstractive outputs using **ROUGE / BERTScore**.
+* **Extractive:** TextRank via Sumy, BeautifulSoup, Requests
+* **Abstractive:** Hugging Face Transformers (BART / T5 / LED), PyTorch, Gradio
+* Optional: NLTK / SpaCy for preprocessing
 
 
-## **Portfolio Soundbite**
+## Next Steps / Improvements
 
-> “Built a two-stage summarization system: starting with a fast extractive baseline using TextRank, then extending to transformer-based abstractive summaries. This demonstrates both **engineering discipline** and hands-on experience with **modern NLP models**.”
-
-
-## **Acknowledgements**
-
-* [Sumy](https://github.com/miso-belica/sumy) — for TextRank implementation
-* [BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/) — for HTML parsing
-* [Hugging Face Spaces](https://huggingface.co/spaces) — for hosting the live demo
-* [OpenAI & ChatGPT](https://openai.com) — guidance on portfolio structuring
+* Fine-tune transformer models for domain-specific summarization
+* Support very long documents using chunking or long-context models
+* Compare extractive vs. abstractive outputs using **ROUGE**, **BERTScore**, or other metrics
+* Expand web interface for interactive summarization
 
 
-## **License**
+## Portfolio Soundbite
 
-This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
+> “Built a two-stage summarization system: a fast extractive baseline using TextRank, extended to transformer-based abstractive summaries, showcasing both NLP engineering and deployment skills.”
+
+
+## Acknowledgements
+
+* Hugging Face Transformers — pretrained models & pipelines
+* Gradio — web interface
+* Sumy — TextRank implementation
+* BeautifulSoup4 — HTML parsing
+* OpenAI & ChatGPT — guidance on portfolio structuring
+
+
+## License
+
+This project is licensed under the MIT License — see LICENSE for details.
 
