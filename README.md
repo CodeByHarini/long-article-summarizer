@@ -3,10 +3,10 @@
 This repository demonstrates a **two-stage summarization system** for long articles, blogs, and research papers:
 
 1. **Extractive Summarizer** – Quickly identifies and extracts the most important sentences using **TextRank**.
-   [Learn more →](extractive/README.md)
+   [Learn more →]()
 
 2. **Abstractive Summarizer** – Generates **human-like summaries** using transformer-based models (BART, T5, LED).
-   [Learn more →](abstractive/README.md)
+   [Learn more →]()
 
 
 ## Project Overview
@@ -24,35 +24,36 @@ Digesting long documents can be time-consuming. This system provides:
 ```
 long-article-summarizer/
 │
-├─ README.md                     # Master README (overview of the repo)
-├─ extractive/
-│   ├─ README.md                 # Extractive-specific README
-│   ├─ app.py
-│   ├─ summarizer.py
-│   ├─ datasets/
-│   │   └─ sample_articles.json
-│   ├─ screenshots/
-│   ├─ demo/
-│   └─ requirements.txt
+├── Abstractive/                              # Abstractive summarizer module
+│   ├── app_abstractive.py                    # Main app for abstractive summarization
+│   ├── summarizer_abstractive.py            # Core logic for abstractive summarization
+│   ├── requirements_abstractive.txt         # Required dependencies for abstractive app
+│   ├── README_abstractive.md               # Documentation for abstractive summarizer
+│   ├── Demo Video Abstractive.mp4          # Demo video for abstractive summarizer
+│   ├── Input Abstractive.jpg               # Sample input example for abstractive
+│   ├── Output Abstractive.jpg              # Sample output example for abstractive
 │
-├─ abstractive/
-│   ├─ README.md                 # Abstractive-specific README
-│   ├─ app_abstractive.py
-│   ├─ summarizer_abstractive.py
-│   ├─ datasets/
-│   │   └─ sample_articles.json
-│   ├─ screenshots/
-│   ├─ demo/
-│   └─ requirements_abstractive.txt
+├── Extractive/                              # Extractive summarizer module
+│   ├── app_extractive.py                    # Main app for extractive summarization
+│   ├── summarizer_extractive.py            # Core logic for extractive summarization
+│   ├── requirements_extractive.txt         # Required dependencies for extractive app
+│   ├── runtime_extractive.txt              # Runtime configuration for extractive app
+│   ├── sample_articles_extractive.json     # Sample data for extractive testing
+│   ├── README_extractive.md               # Documentation for extractive summarizer
+│   ├── Demo Video Extractive.mp4          # Demo video for extractive summarizer
+│   ├── Input Extractive.jpg               # Sample input example for extractive
+│   ├── Output Extractive.jpg              # Sample output example for extractive
 │
-├─ LICENSE
-└─ .gitignore
+├── LICENSE                                # Open-source MIT license
+├── README.md                             # Main documentation for the project
+├── .gitignore                            # Files and folders ignored by Git
+
 ```
 
 ## Live Demo
 
-* **Extractive Summarizer:** [Try it on Hugging Face Spaces](#)
-* **Abstractive Summarizer:** [Try it on Hugging Face Spaces](#)
+* **Extractive Summarizer:** [Try it on Hugging Face Spaces](https://huggingface.co/spaces/CodeByHarini/long-article-summarizer-extractive)
+* **Abstractive Summarizer:** [Try it on Hugging Face Spaces](https://huggingface.co/spaces/CodeByHarini/long-article-summarizer-abstractive)
 
 
 ## Installation (Local Testing)
