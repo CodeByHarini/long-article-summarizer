@@ -1,4 +1,3 @@
-# Byte-compiled / Python cache
 __pycache__/
 *.pyc
 *.pyo
@@ -10,6 +9,17 @@ venv/
 .tfenv/
 
 # NLTK data (optional, can be downloaded on first run)
+*.pkl
+*.db
+.venv/
+venv/
+env/
+
+# Jupyter & VSCode
+.ipynb_checkpoints
+.vscode/
+
+# NLTK data cache
 nltk_data/
 
 # OS files
@@ -44,3 +54,12 @@ models/
 
 # Environment / config files (optional)
 *.env
+
+
+# Hugging Face Spaces cache
+.gradio/
+.idea/
+
+# Logs
+*.log
+
