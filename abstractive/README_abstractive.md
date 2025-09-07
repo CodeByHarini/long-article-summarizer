@@ -94,5 +94,6 @@ long-article-summarizer/
 
 ## License
 
-This project is licensed under the MIT License — see LICENSE for details.
+This project is licensed under the [MIT License](https://github.com/CodeByHarini/long-article-summarizer/blob/main/LICENSE) — see the LICENSE file for details.
+
 
