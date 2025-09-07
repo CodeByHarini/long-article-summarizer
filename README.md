@@ -28,7 +28,7 @@ Try the live demo on Hugging Face Spaces:
 
 **Input Text Example:**
 
-![Input Screenshot](Input Extractive.jpg)
+![Input Screenshot](https://github.com/CodeByHarini/long-article-summarizer/blob/3baf91faddcb9dfca242870d835b64cb2df51641/Input%20Extractive.jpg)
 
 **Extractive Summary Output:**
 
